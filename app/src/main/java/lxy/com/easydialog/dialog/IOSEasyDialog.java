@@ -128,7 +128,7 @@ public class IOSEasyDialog extends BaseDialog {
         }
 
         @Override
-        protected BaseDialog createDialog() {
+        protected IOSEasyDialog createDialog() {
             return IOSEasyDialog.newInstance(params);
         }
     }

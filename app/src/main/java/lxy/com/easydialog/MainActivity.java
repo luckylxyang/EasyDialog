@@ -2,19 +2,17 @@ package lxy.com.easydialog;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-import kale.ui.view.dialog.BaseCustomDialog;
-import kale.ui.view.dialog.EasyDialog;
 import lxy.com.easydialog.databinding.ActivityMainBinding;
+import lxy.com.easydialog.dialog.BaseCustomDialog;
+import lxy.com.easydialog.dialog.BottomDialog;
 import lxy.com.easydialog.dialog.CustomDialog;
 import lxy.com.easydialog.dialog.IOSEasyDialog;
 import lxy.com.easydialog.dialog.MaterialEasyDialog;
-import lxy.com.easydialog.dialog.ViewHolder;
 import lxy.com.easydialog.utils.ToastUtils;
-import top.limuyang2.customldialog.IOSMsgDialog;
-import top.limuyang2.customldialog.MaterialMsgDialog;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,17 +32,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
         binding.button.setOnClickListener(view -> {
-//            MDialog dialog = new MDialog();
-//            dialog.show(getSupportFragmentManager(), "MDialog");
-            IOSMsgDialog.Companion.init(getSupportFragmentManager())
-                    .setTitle("titlewsdfhkdsfjkdshgjidfutgrdfmggbrgtitlewsdfhkdsfjkdshgjidfutgrdfmggbrg")
-//                    .setMessage("message")
-                    .setNegativeButton("cancel",v->ToastUtils.showShort(MainActivity.this, "cancel"))
-                    .show();
+            new MCustomDialog()
+                    .show(getSupportFragmentManager());
 
         });
         binding.coustom.setOnClickListener(view -> {
             new CustomDialog.Builder(this)
+                    .setBottomDialog(true)
                     .setView(R.layout.custom_dialog)
                     .setViewHandlerListener((dialog, holder) -> {
                         holder.setOnClickListener(R.id.custom_dialog_cancel,view1 -> {
@@ -52,9 +46,6 @@ public class MainActivity extends AppCompatActivity {
                             dialog.dismiss();
                         });
                     })
-                    .setHeight(0.2f)
-                    .setWidthP(0.2f)
-                    .setCancelOutside(false)
                     .show();
         });
 

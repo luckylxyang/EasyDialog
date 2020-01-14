@@ -112,7 +112,7 @@ public class MaterialEasyDialog extends BaseDialog {
 
 
         @Override
-        protected BaseDialog createDialog() {
+        protected MaterialEasyDialog createDialog() {
             return MaterialEasyDialog.newInstance(params);
         }
     }
