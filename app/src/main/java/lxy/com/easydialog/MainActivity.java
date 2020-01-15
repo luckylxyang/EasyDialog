@@ -1,5 +1,6 @@
 package lxy.com.easydialog;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentTransaction;

@@ -32,8 +32,12 @@ public class CustomDialog extends BaseDialog {
     private float widthP = 1, heightP = 1;
     private boolean isBottomDialog;
 
-    static CustomDialog newInstance(DialogParams params) {
+    /**
+     * 背景是否透明
+     */
+    private boolean isTransparent = true;
 
+    static CustomDialog newInstance(DialogParams params) {
         Bundle args = new Bundle();
         args.putSerializable(KEY_PARAMS,params);
         CustomDialog fragment = new CustomDialog();
@@ -41,11 +45,12 @@ public class CustomDialog extends BaseDialog {
         return fragment;
     }
 
+    private CustomDialog(){}
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         getDialog().requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.translation)));
         return null;
     }
 
@@ -70,8 +75,7 @@ public class CustomDialog extends BaseDialog {
             } else {
                 sheetDialog.setContentView(params.mView);
             }
-            sheetDialog.getWindow().findViewById(R.id.design_bottom_sheet)
-                    .setBackgroundResource(android.R.color.transparent);
+
         }else {
             if (params.mView == null) {
                 dialog.setContentView(params.mViewId);
@@ -94,7 +98,20 @@ public class CustomDialog extends BaseDialog {
         if (handleListener != null){
             handleListener.onClick(this,holder);
         }
+
+        setupViews();
     }
+
+    private void setupViews() {
+        if (isTransparent) {
+            if (isBottomDialog) {
+                getDialog().getWindow().findViewById(R.id.design_bottom_sheet)
+                        .setBackgroundResource(android.R.color.transparent);
+            }
+            getDialog().getWindow().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.translation)));
+        }
+    }
+
 
     protected void setViewHandlerListener(OnViewHandleListener listener){
         this.handleListener = listener;
@@ -112,6 +129,10 @@ public class CustomDialog extends BaseDialog {
         isBottomDialog = bottomDialog;
     }
 
+    public void setBackgroundTransparent(boolean transparent){
+        this.isTransparent = transparent;
+    }
+
     public interface OnViewHandleListener {
         /**
          * dialog 的点击处理事件
@@ -125,6 +146,7 @@ public class CustomDialog extends BaseDialog {
         private OnViewHandleListener listener;
         private float widthP = 1, heightP = 1;
         private boolean isBottomDialog;
+        private boolean isTransparent = true;
         public Builder(@NonNull Context context) {
             super(context);
         }
@@ -149,6 +171,11 @@ public class CustomDialog extends BaseDialog {
             return this;
         }
 
+        public Builder setBackgroundTransparent(boolean transparent){
+            this.isTransparent = transparent;
+            return this;
+        }
+
         @Override
         protected BaseDialog createDialog() {
             CustomDialog dialog = CustomDialog.newInstance(params);
@@ -156,6 +183,7 @@ public class CustomDialog extends BaseDialog {
             dialog.setWidthP(widthP);
             dialog.setHeightP(heightP);
             dialog.setBottomDialog(isBottomDialog);
+            dialog.setBackgroundTransparent(isTransparent);
             return dialog;
         }
     }
