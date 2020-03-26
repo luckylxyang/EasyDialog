@@ -6,6 +6,7 @@ import androidx.databinding.DataBindingUtil;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.ViewGroup;
 
 import lxy.com.easydialog.databinding.ActivityMainBinding;
 import lxy.com.easydialog.dialog.BaseCustomDialog;
