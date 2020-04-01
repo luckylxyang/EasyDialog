@@ -1,4 +1,4 @@
-package lxy.com.easydialog.dialog;
+package com.lxy.edialog.dialog;
 
 import android.content.DialogInterface;
 import android.view.KeyEvent;

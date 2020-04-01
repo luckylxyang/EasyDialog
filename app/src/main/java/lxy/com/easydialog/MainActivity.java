@@ -1,19 +1,16 @@
 package lxy.com.easydialog;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
-import android.view.ViewGroup;
 
 import lxy.com.easydialog.databinding.ActivityMainBinding;
-import lxy.com.easydialog.dialog.BaseCustomDialog;
-import lxy.com.easydialog.dialog.BottomDialog;
-import lxy.com.easydialog.dialog.CustomDialog;
-import lxy.com.easydialog.dialog.IOSEasyDialog;
-import lxy.com.easydialog.dialog.MaterialEasyDialog;
+import com.lxy.edialog.dialog.BaseCustomDialog;
+import com.lxy.edialog.dialog.BottomDialog;
+import com.lxy.edialog.dialog.CustomDialog;
+import com.lxy.edialog.dialog.IOSEasyDialog;
+import com.lxy.edialog.dialog.MaterialEasyDialog;
 import lxy.com.easydialog.utils.ToastUtils;
 
 public class MainActivity extends AppCompatActivity {

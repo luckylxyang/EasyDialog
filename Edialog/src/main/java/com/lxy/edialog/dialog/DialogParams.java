@@ -1,8 +1,7 @@
-package lxy.com.easydialog.dialog;
+package com.lxy.edialog.dialog;
 
 import android.view.View;
 
-import com.ninetripods.sydialoglib.IDialog;
 
 import java.io.Serializable;
 

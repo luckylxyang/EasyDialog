@@ -1,4 +1,4 @@
-package lxy.com.easydialog.dialog;
+package com.lxy.edialog.dialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -16,10 +16,10 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.lxy.edialog.R;
 
-import lxy.com.easydialog.R;
+import static android.content.ContentValues.TAG;
 
-import static androidx.constraintlayout.widget.Constraints.TAG;
 
 /**
  * Creator : lxy
