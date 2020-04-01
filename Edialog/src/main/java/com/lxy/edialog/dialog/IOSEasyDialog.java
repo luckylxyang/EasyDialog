@@ -71,7 +71,6 @@ public class IOSEasyDialog extends BaseDialog {
         mTvPositiveText = decorView.findViewById(R.id.ios_dialog_option_positive);
         mLine = decorView.findViewById(R.id.ios_dialog_option_line);
         mLine2 = decorView.findViewById(R.id.ios_dialog_option_line2);
-
     }
 
     private void installContent() {
