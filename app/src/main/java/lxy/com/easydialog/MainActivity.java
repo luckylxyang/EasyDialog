@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         binding.tv.setOnClickListener(view -> {
             new IOSEasyDialog.Builder(MainActivity.this)
                     .setTitle("title")
-//                    .setMessage("message")
+                    .setMessage("message")
                     .setNegativeButton("cancel", view13 -> ToastUtils.showShort(MainActivity.this, "cancel"))
                     .setPositiveButton("sure", view1 -> ToastUtils.showShort(MainActivity.this, "sure"))
                     .show();
