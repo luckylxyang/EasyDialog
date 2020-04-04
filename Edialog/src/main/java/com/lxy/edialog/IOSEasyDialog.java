@@ -1,4 +1,4 @@
-package com.lxy.edialog.dialog;
+package com.lxy.edialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -13,8 +13,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-
-import com.lxy.edialog.R;
 
 
 /**

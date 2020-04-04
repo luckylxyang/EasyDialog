@@ -6,11 +6,10 @@ import androidx.databinding.DataBindingUtil;
 import android.os.Bundle;
 
 import lxy.com.easydialog.databinding.ActivityMainBinding;
-import com.lxy.edialog.dialog.BaseCustomDialog;
-import com.lxy.edialog.dialog.BottomDialog;
-import com.lxy.edialog.dialog.CustomDialog;
-import com.lxy.edialog.dialog.IOSEasyDialog;
-import com.lxy.edialog.dialog.MaterialEasyDialog;
+
+import com.lxy.edialog.CustomDialog;
+import com.lxy.edialog.IOSEasyDialog;
+import com.lxy.edialog.MaterialEasyDialog;
 import lxy.com.easydialog.utils.ToastUtils;
 
 public class MainActivity extends AppCompatActivity {

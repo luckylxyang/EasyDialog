@@ -1,8 +1,25 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+
+publish { // 新增
+
+    userOrg = 'luckyliu' // 注册bintray时的username
+
+    groupId = 'com.lxy.edialog' // 项目包名
+
+    artifactId = 'edialog' // 项目名
+
+    publishVersion = '0.0.1' // 发布版本号
+
+    desc = 'Easy to build a dialog' // 项目描述，可选项
+
+    website = 'https://github.com/luckylxyang/EasyDialog' // 项目站点，可选项
+
+}
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.3"
+    buildToolsVersion "29.0.2"
 
 
     defaultConfig {
@@ -32,4 +49,5 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'com.google.android.material:material:1.2.0-alpha03'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
 }

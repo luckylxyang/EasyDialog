@@ -1,24 +1,25 @@
-package com.lxy.edialog.dialog;
+package com.lxy.edialog;
 
 import android.app.Dialog;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.fragment.app.DialogFragment;
+
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 /**
  * Creator : lxy
- * date: 2020/1/12
+ * date: 2020/1/10
  */
-public abstract class BaseCustomDialog extends BaseDialog {
-
-
+public class BottomDialog extends DialogFragment {
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
-        return super.onCreateDialog(savedInstanceState);
+        return new BottomSheetDialog(getContext());
     }
+
 
 }

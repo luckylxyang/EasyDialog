@@ -1,12 +1,10 @@
-package com.lxy.edialog.dialog;
+package com.lxy.edialog;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.text.Spannable;
 import android.util.SparseArray;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 

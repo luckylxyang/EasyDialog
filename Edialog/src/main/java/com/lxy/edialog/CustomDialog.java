@@ -1,4 +1,4 @@
-package com.lxy.edialog.dialog;
+package com.lxy.edialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -16,7 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-import com.lxy.edialog.R;
 
 import static android.content.ContentValues.TAG;
 

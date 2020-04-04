@@ -1,4 +1,4 @@
-package com.lxy.edialog.dialog;
+package com.lxy.edialog;
 
 import android.view.View;
 

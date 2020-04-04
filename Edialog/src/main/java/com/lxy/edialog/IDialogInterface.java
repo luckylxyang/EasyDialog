@@ -1,6 +1,5 @@
-package com.lxy.edialog.dialog;
+package com.lxy.edialog;
 
-import android.content.DialogInterface;
 import android.view.KeyEvent;
 
 /**
